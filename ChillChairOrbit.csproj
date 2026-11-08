@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GamePath Condition="'$(GamePath)' == ''">D:\Program Files\Steam\steamapps\common\Chill with You Lo-Fi Story</GamePath>
+    <GameManaged>$(GamePath)\Chill With You_Data\Managed</GameManaged>
+    <GameBepInEx>$(GamePath)\BepInEx\core</GameBepInEx>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BepInEx" HintPath="$(GameBepInEx)\BepInEx.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(GameBepInEx)\0Harmony.dll" Private="false" />
+    <Reference Include="Assembly-CSharp" HintPath="$(GameManaged)\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="$(GameManaged)\UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(GameManaged)\UnityEngine.CoreModule.dll" Private="false" />
+  </ItemGroup>
+</Project>
